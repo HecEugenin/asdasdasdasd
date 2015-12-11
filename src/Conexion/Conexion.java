@@ -17,8 +17,8 @@ public class Conexion {
     Statement stmt;
     ResultSet rs;
     String usuario = "root";
-    String clave = "123456";
-    String url = "jdbc:mysql://localhost:3306/test01";
+    String clave = "";
+    String url = "jdbc:mysql://localhost:3306/p3_grupo4";
     public Conexion() {
         try {
             Class.forName("org.gjt.mm.mysql.Driver");
