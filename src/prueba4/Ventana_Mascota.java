@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 public class Ventana_Mascota extends JFrame{
     public Ventana_Mascota(){
         this.setTitle("VENTANA MASCOTAS");
-        this.setSize(500,200);
+        this.setSize(700,600);
        
         Panel_Mascota m2=new Panel_Mascota();
         this.add(m2);
