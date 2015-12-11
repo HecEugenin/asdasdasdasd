@@ -138,6 +138,7 @@ public class Panel_Usuarios extends JPanel {
             usu.setId_mascota(Mascota_id);
             usu.save();
             Limpiar();
+            llenarTabla();
         }
     }
     
