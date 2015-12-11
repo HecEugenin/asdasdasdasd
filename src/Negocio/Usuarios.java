@@ -82,7 +82,7 @@ public class Usuarios {
     }
 
     public void delete() {
-        con.setEjecutar("delete from usuarios where usuario_id='" + this.id_usuario + "'");
+        con.setEjecutar("delete from usuarios where id_usuario='" + this.id_usuario + "'");
     }
 
     public void update() {
