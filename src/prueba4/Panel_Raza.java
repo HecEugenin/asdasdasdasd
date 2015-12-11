@@ -103,6 +103,7 @@ public class Panel_Raza extends JPanel {
             raza.setId_raza(Id_Raza);
             raza.save();
             Limpiar();
+            llenarTabla();
         }
     }
     
