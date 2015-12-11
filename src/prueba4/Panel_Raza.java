@@ -79,8 +79,12 @@ public class Panel_Raza extends JPanel {
     public void Limpiar() {
         txtNombre.setText("");
         txtId_Raza.setText("");
-        
-        
     }
+    
+    
+    
+    
+    
+    
 
 }
