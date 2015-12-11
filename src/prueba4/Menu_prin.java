@@ -15,8 +15,10 @@ public class Menu_prin extends JFrame {
     JMenu mnuArchivo=new JMenu("Archivo");
     JMenu mnuModulos=new JMenu("Modulos");
     JMenuItem mnuSalir=new JMenuItem("Salir");
-    JMenuItem mnuCiudad=new JMenuItem("Usuarios");
+    JMenuItem mnuUsuarios=new JMenuItem("Usuarios");
+    JMenuItem mnuMascotas=new JMenuItem("Mascotas");
     Ventana_Usuarios vU=new Ventana_Usuarios();
+    Ventana_Mascota vMS=new Ventana_Mascota();
     
     public Menu_prin(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,17 +28,26 @@ public class Menu_prin extends JFrame {
       
         barra.add(mnuArchivo);
         barra.add(mnuModulos);
-        mnuModulos.add(mnuCiudad);
+        mnuModulos.add(mnuUsuarios);
+        mnuModulos.add(mnuMascotas);
         mnuArchivo.add(mnuSalir);
         this.add(barra,BorderLayout.NORTH);
         OyenteModulo1 o1=new OyenteModulo1();
-        mnuCiudad.addActionListener(o1);
+        mnuUsuarios.addActionListener(o1);
+        OyenteModulo2 o2=new OyenteModulo2();
+        mnuMascotas.addActionListener(o1);
+        
         OyenteCerrar oCerrar=new OyenteCerrar();
         mnuSalir.addActionListener(oCerrar);
     }
     class OyenteModulo1 implements ActionListener{
         public void actionPerformed(ActionEvent e){
          vU.setVisible(true);
+        }
+    }
+    class OyenteModulo2 implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+         vMS.setVisible(true);
         }
     }
     class OyenteCerrar implements ActionListener{
