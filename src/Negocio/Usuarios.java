@@ -89,7 +89,10 @@ public class Usuarios {
         con.setEjecutar("update usuarios set rut='" + this.rut + "', nombre='" + this.nombre + "',apepat='" + this.apepat + "',apemat='"+this.apemat+"' where  id_usuario='" + this.id_usuario + "'");
     }
 
-
+   
+    
+    
+    
 public List list(){
         List<Usuarios> lista=new ArrayList<Usuarios>();
         con.setSeleccion("select * from Usuarios");
@@ -111,3 +114,9 @@ public List list(){
         return lista;
     }
 }
+
+
+/* public void Buscar(){
+        con.setEjecutar("select * from Usuarios where nombre like '%'" + this.nombre + "'%' ");
+    }
+*/

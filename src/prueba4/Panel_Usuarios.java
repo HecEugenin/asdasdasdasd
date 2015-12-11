@@ -167,6 +167,8 @@ public class Panel_Usuarios extends JPanel {
         }
     }
     
+    
+    
     class OyenteEditar implements ActionListener{
         public void actionPerformed(ActionEvent e){
             Usuarios usu=new Usuarios();
@@ -213,3 +215,13 @@ public class Panel_Usuarios extends JPanel {
         
     }
 }
+/*class OyenteBuscar implements ActionListener{
+    public void actionPerformed(ActionEvent e){
+            Usuarios usu=new Usuarios();
+            String nom=txtNombre.getText();
+            usu.Buscar();
+            Limpiar();
+            llenarTabla();
+    }
+    
+    }*/
