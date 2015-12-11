@@ -98,6 +98,7 @@ public class Panel_Usuarios extends JPanel {
         OyenteAgregar oAgregar = new OyenteAgregar();
         btnAgregar.addActionListener(oAgregar);
         
+        
         scrollTabla.setBounds(20,210, 500,380);
         this.add(scrollTabla);
         

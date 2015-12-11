@@ -37,24 +37,20 @@ public class Panel_Mascota extends JPanel {
         this.add(lblNombre);
         txtNombre.setBounds(150, 20, 120, 20);
         this.add(txtNombre);
-        
-        
         lblId_Raza.setBounds(20, 80, 120, 20);
         this.add(lblId_Raza);
         txtId_Raza.setBounds(150, 80, 120, 20);
         this.add(txtId_Raza);
-        
         lblPeso.setBounds(20, 110, 120, 20);
         this.add(lblPeso);
         txtPeso.setBounds(150, 110, 120, 20);
         this.add(txtPeso);
-        
         lblId_Mascota.setBounds(280, 110, 120, 20);
         this.add(lblId_Mascota);
         txtId_Mascota.setBounds(360, 110, 120, 20);
         this.add(txtId_Mascota);
-    
-        btnAgregar.setBounds(20, 140, 120, 20);
+        
+         btnAgregar.setBounds(20, 140, 120, 20);
         this.add(btnAgregar);
         btnLimpiar.setBounds(150, 140, 120, 20);
         this.add(btnLimpiar);
