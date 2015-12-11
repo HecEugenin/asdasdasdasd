@@ -17,12 +17,14 @@ public class Menu_prin extends JFrame {
     JMenuItem mnuSalir=new JMenuItem("Salir");
     JMenuItem mnuUsuarios=new JMenuItem("Usuarios");
     JMenuItem mnuMascotas=new JMenuItem("Mascotas");
+    JMenuItem mnuRazas=new JMenuItem("Razas");
     Ventana_Usuarios vU=new Ventana_Usuarios();
     Ventana_Mascota vMS=new Ventana_Mascota();
+    Ventana_Raza vRZ= new Ventana_Raza();
     
     public Menu_prin(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("CRUD JAVA SWING");
+        this.setTitle("Base Operaciones xD");
         this.setSize(600, 600);
         this.setVisible(true);
       
@@ -30,12 +32,15 @@ public class Menu_prin extends JFrame {
         barra.add(mnuModulos);
         mnuModulos.add(mnuUsuarios);
         mnuModulos.add(mnuMascotas);
+        mnuModulos.add(mnuRazas);
         mnuArchivo.add(mnuSalir);
         this.add(barra,BorderLayout.NORTH);
         OyenteModulo1 o1=new OyenteModulo1();
         mnuUsuarios.addActionListener(o1);
         OyenteModulo2 o2=new OyenteModulo2();
-        mnuMascotas.addActionListener(o1);
+        mnuMascotas.addActionListener(o2);
+        OyenteModulo3 o3=new OyenteModulo3();
+        mnuRazas.addActionListener(o3);
         
         OyenteCerrar oCerrar=new OyenteCerrar();
         mnuSalir.addActionListener(oCerrar);
@@ -50,6 +55,12 @@ public class Menu_prin extends JFrame {
          vMS.setVisible(true);
         }
     }
+    class OyenteModulo3 implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+         vRZ.setVisible(true);
+        }
+    }
+    
     class OyenteCerrar implements ActionListener{
         public void actionPerformed(ActionEvent e){
             System.exit(0);
