@@ -16,7 +16,7 @@ public class Menu_prin extends JFrame {
     JMenu mnuModulos=new JMenu("Modulos");
     JMenuItem mnuSalir=new JMenuItem("Salir");
     JMenuItem mnuCiudad=new JMenuItem("Ciudades");
-    Ventana2 v2=new Ventana2();
+   
     
     public Menu_prin(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +36,7 @@ public class Menu_prin extends JFrame {
     }
     class OyenteModulo1 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-           v2.setVisible(true);
+         
         }
     }
     class OyenteCerrar implements ActionListener{
