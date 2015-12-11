@@ -29,6 +29,7 @@ public class Panel_Mascota extends JPanel {
     JButton btnEliminar = new JButton("ELiminar");
     JButton btnEditar = new JButton("Editar");
     JButton btnLimpiar = new JButton("Limpiar");
+    
 
     public Panel_Mascota() {
         this.setLayout(null);
@@ -58,11 +59,13 @@ public class Panel_Mascota extends JPanel {
         this.add(btnEliminar);
         btnEditar.setBounds(410, 140, 120, 20);
         this.add(btnEditar);
+        
+        
         OyenteLimpiar oLimpiar = new OyenteLimpiar();
         btnLimpiar.addActionListener(oLimpiar);
         OyenteAgregar oAgregar = new OyenteAgregar();
         btnAgregar.addActionListener(oAgregar);
-
+        
     }
 
     class OyenteLimpiar implements ActionListener {

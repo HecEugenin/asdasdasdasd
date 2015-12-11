@@ -30,6 +30,7 @@ public class Panel_Raza extends JPanel {
     JButton btnEliminar = new JButton("ELiminar");
     JButton btnEditar = new JButton("Editar");
     JButton btnLimpiar = new JButton("Limpiar");
+    JButton btnBuscar = new JButton("Buscar");
     
     
     DefaultTableModel modelo=new DefaultTableModel();{
@@ -47,39 +48,41 @@ public class Panel_Raza extends JPanel {
     public Panel_Raza() {
         this.setLayout(null);
         
-        lblNombre.setBounds(20, 20, 120, 20);
+        lblNombre.setBounds(20, 50, 120, 20);
         this.add(lblNombre);
-        txtNombre.setBounds(150, 20, 120, 20);
+        txtNombre.setBounds(150, 50, 120, 20);
         this.add(txtNombre);
         
-         lblId_Raza.setBounds(20, 50, 120, 20);
+         lblId_Raza.setBounds(20, 80, 120, 20);
         this.add(lblId_Raza);
-        txtId_Raza.setBounds(150, 50, 120, 20);
+        txtId_Raza.setBounds(150, 80, 120, 20);
         this.add(txtId_Raza);
         
         
-        btnAgregar.setBounds(20, 80, 120, 20);
+        btnAgregar.setBounds(20, 110, 120, 20);
         this.add(btnAgregar);
-        btnLimpiar.setBounds(150, 80, 120, 20);
+        btnLimpiar.setBounds(150, 110, 120, 20);
         this.add(btnLimpiar);
-        btnEliminar.setBounds(280, 80, 120, 20);
+        btnEliminar.setBounds(280, 110, 120, 20);
         this.add(btnEliminar);
-        btnEditar.setBounds(410, 80, 120, 20);
+        btnEditar.setBounds(410, 110, 120, 20);
         this.add(btnEditar);
-        
+        btnBuscar.setBounds(540,110,120,20);
+        this.add(btnBuscar);
         OyenteLimpiar oLimpiar = new OyenteLimpiar();
         btnLimpiar.addActionListener(oLimpiar);
         OyenteAgregar oAgregar = new OyenteAgregar();
         btnAgregar.addActionListener(oAgregar);
         
         
-        scrollTabla.setBounds(20,210, 500,380);
+        scrollTabla.setBounds(75,160, 500,380);
         this.add(scrollTabla);
         
         OyenteEliminar oEliminar=new OyenteEliminar();
         btnEliminar.addActionListener(oEliminar);
         OyenteEditar oEditar=new OyenteEditar();
         btnEditar.addActionListener(oEditar);
+        
         
         llenarTabla();
 

@@ -35,6 +35,7 @@ public class Panel_Usuarios extends JPanel {
     JButton btnEliminar = new JButton("ELiminar");
     JButton btnEditar = new JButton("Editar");
     JButton btnLimpiar = new JButton("Limpiar");
+    JButton btnBuscar = new JButton("Buscar");
     
     
     DefaultTableModel modelo=new DefaultTableModel();{
@@ -93,13 +94,16 @@ public class Panel_Usuarios extends JPanel {
         this.add(btnEliminar);
         btnEditar.setBounds(410, 180, 120, 20);
         this.add(btnEditar);
+        btnBuscar.setBounds(540,180,120,20);
+        this.add(btnBuscar);
+        
         OyenteLimpiar oLimpiar = new OyenteLimpiar();
         btnLimpiar.addActionListener(oLimpiar);
         OyenteAgregar oAgregar = new OyenteAgregar();
         btnAgregar.addActionListener(oAgregar);
         
         
-        scrollTabla.setBounds(20,210, 500,380);
+        scrollTabla.setBounds(20,210, 640,380);
         this.add(scrollTabla);
         
         OyenteEliminar oEliminar=new OyenteEliminar();

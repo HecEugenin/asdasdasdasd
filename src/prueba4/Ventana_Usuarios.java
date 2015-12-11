@@ -14,7 +14,7 @@ import javax.swing.JFrame;
 public class Ventana_Usuarios extends JFrame{
      public Ventana_Usuarios(){
         this.setTitle("VENTANA USUARIOS");
-        this.setSize(600,600);
+        this.setSize(700,600);
        
          Panel_Usuarios p2=new Panel_Usuarios();
         this.add(p2);
