@@ -24,7 +24,7 @@ public class Menu_prin extends JFrame {
     
     public Menu_prin(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Base Operaciones xD");
+        this.setTitle("Cuartel de Operaciones xD");
         this.setSize(600, 600);
         this.setVisible(true);
       
