@@ -15,8 +15,8 @@ public class Menu_prin extends JFrame {
     JMenu mnuArchivo=new JMenu("Archivo");
     JMenu mnuModulos=new JMenu("Modulos");
     JMenuItem mnuSalir=new JMenuItem("Salir");
-    JMenuItem mnuCiudad=new JMenuItem("Ciudades");
-   
+    JMenuItem mnuCiudad=new JMenuItem("Usuarios");
+    Ventana_Usuarios vU=new Ventana_Usuarios();
     
     public Menu_prin(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,7 +36,7 @@ public class Menu_prin extends JFrame {
     }
     class OyenteModulo1 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-         
+         vU.setVisible(true);
         }
     }
     class OyenteCerrar implements ActionListener{
