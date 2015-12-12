@@ -68,7 +68,7 @@ public class Mascotas {
     }
 
     public void update() {
-        con.setEjecutar("update Mascotas set id_mascota='" + this.id_mascota + "',nombre='" + this.nombre + "',peso='"+this.peso+"',id_raza='" + this.id_raza+"' where  id_mascota='" + this.id_mascota + "'");
+        con.setEjecutar("update Mascotas set nombre='" + this.nombre + "',peso='"+this.peso+"',id_raza='" + this.id_raza+"' where  id_mascota='" + this.id_mascota + "'");
     }
     
 

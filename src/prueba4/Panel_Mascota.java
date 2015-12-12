@@ -38,11 +38,10 @@ public class Panel_Mascota extends JPanel {
     
     DefaultTableModel modelo=new DefaultTableModel();{
        
+        modelo.addColumn("ID_MASCOTA");
         modelo.addColumn("NOMBRE");
+         modelo.addColumn("PESO");
         modelo.addColumn("ID_RAZA");
-        
-        modelo.addColumn("PESO");
-        modelo.addColumn("ID_Mascota");
     }
     
     JTable tabla=new JTable(modelo);
