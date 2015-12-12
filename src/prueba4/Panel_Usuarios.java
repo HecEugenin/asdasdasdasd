@@ -172,12 +172,13 @@ public class Panel_Usuarios extends JPanel {
     class OyenteEditar implements ActionListener{
         public void actionPerformed(ActionEvent e){
             Usuarios usu=new Usuarios();
+            
             String nom=txtNombre.getText();
             int Id_Usu= Integer.parseInt(txtId_Usuarios.getText());
             int rut= Integer.parseInt(txtRut.getText());
             String apeP = txtApellidoPAT.getText();
             String apeM = txtApellidoMAT.getText();
-            int Mascota_id = Integer.parseInt(txtId_Mascota.getText());
+            
             
             
             usu.setId_Usuario(Id_Usu);
@@ -185,7 +186,7 @@ public class Panel_Usuarios extends JPanel {
             usu.setRut(rut);
             usu.setApemat(apeP);
             usu.setApepat(apeP);
-            usu.setId_mascota(Mascota_id);
+           
             usu.update();
             Limpiar();
             llenarTabla();
