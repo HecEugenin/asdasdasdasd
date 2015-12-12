@@ -9,14 +9,15 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author yerico
+ * @author tito
  */
-public class Ventana_Usuarios extends JFrame{
-     public Ventana_Usuarios(){
-        this.setTitle("VENTANA USUARIOS");
-        this.setSize(700,600);
+public class VentanaPedidos extends JFrame{
+    public VentanaPedidos(){
+        this.setTitle("PEDIDOS");
+        this.setSize(700,700);
        
-         Panel_Usuarios p2=new Panel_Usuarios();
-        this.add(p2);
+        PanelVentanaPedidos m2=new PanelVentanaPedidos();
+        this.add(m2);
+        
     }
 }

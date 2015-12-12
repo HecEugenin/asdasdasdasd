@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
@@ -14,23 +16,27 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author emanuel
  */
-public class Panel_Articulos extends JPanel {
+public class PanelVentanaArticulos extends JPanel {
     
-    JLabel lblDescripcion = new JLabel("Descripcion:");
+    JLabel lblDescripcion = new JLabel("DESCRIPCION");
     JTextField txtDescripcion = new JTextField();
-    JLabel lblNombre = new JLabel("Nombre:");
+    
+    JLabel lblNombre = new JLabel("NOMBRE");
     JTextField txtNombre = new JTextField();
-    JLabel lblPrecio = new JLabel("Precio:");
+    
+    JLabel lblPrecio = new JLabel("PRECIO");
     JTextField txtPrecio = new JTextField();
+    
     JLabel lblId_pedido = new JLabel("Id_pedido");
     JTextField txtId_pedido = new JTextField();
     JButton btnAgregar = new JButton("Agregar");
     JButton btnBuscar = new JButton("Buscar");
-    JButton btnEliminar = new JButton("ELiminar");
+    JButton btnEliminar = new JButton("Eliminar");
     JButton btnEditar = new JButton("Editar");
     JButton btnLimpiar = new JButton("Limpiar");
      JTextField txtId_articulo = new JTextField();
     JLabel lblId_articulo = new JLabel("Id_articulo");
+    
     DefaultTableModel modelo=new DefaultTableModel();{
         modelo.addColumn("ID");
         modelo.addColumn("DESCRIPCION");
@@ -39,7 +45,10 @@ public class Panel_Articulos extends JPanel {
         modelo.addColumn("ID_PEDIDO");
        
     }
-    public Panel_Articulos() {
+    JTable tabla=new JTable(modelo);
+    JScrollPane scrollTabla=new JScrollPane(tabla);
+
+    public PanelVentanaArticulos() {
      this.setLayout(null);
         lblDescripcion.setBounds(20, 20, 120, 20);
         this.add(lblDescripcion);
@@ -78,6 +87,8 @@ public class Panel_Articulos extends JPanel {
         btnEliminar.addActionListener(oEliminar);
         OyenteEditar oEditar=new OyenteEditar();
         btnEditar.addActionListener(oEditar);
+          scrollTabla.setBounds(20,210, 640,380);
+        this.add(scrollTabla);
         llenarTabla();
     }
      class OyenteLimpiar implements ActionListener {
@@ -103,6 +114,7 @@ public class Panel_Articulos extends JPanel {
             
             art.save();
             Limpiar();
+             llenarTabla();
         }
     }
     class OyenteEliminar implements ActionListener{
@@ -130,6 +142,7 @@ public class Panel_Articulos extends JPanel {
             
             art.save();
             Limpiar();
+             llenarTabla();
         }
     
     }
@@ -139,7 +152,7 @@ public class Panel_Articulos extends JPanel {
         Articulos articulo=new Articulos();
         List<Articulos> lista=articulo.list();
       
-       Object[] list=new Object[6];
+       Object[] list=new Object[5];
         for(int i=0;i<lista.size();i++){
            
             list[0]=""+lista.get(i).getId_articulo();

@@ -1,6 +1,4 @@
-/*
- USUARIOS
- */
+
 package prueba4;
 
 
@@ -16,23 +14,27 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-public class Panel_Usuarios extends JPanel {
-
-    JLabel lblNombre = new JLabel("Nombre:");
+public class PanelVentanaUsuarios extends JPanel {
+ JLabel lblId_usuario = new JLabel("id_usuario");
+    JTextField txtId_usuario = new JTextField();
+    
+    JLabel lblNombre = new JLabel("NOMBRE");
     JTextField txtNombre = new JTextField();
-    JLabel lblId_Usuarios = new JLabel("id_usuarios");
-    JTextField txtId_Usuarios = new JTextField();
+   
     JLabel lblPeso = new JLabel("PESO");
     JTextField txtPeso  = new JTextField();
-    JLabel lblApellidoPAT = new JLabel("Apellido Paterno");
-    JTextField txtApellidoPAT = new JTextField();
-    JLabel lblApellidoMAT = new JLabel("Apellido Materno");
-    JTextField txtApellidoMAT = new JTextField();
+    
+    JLabel lblAPEPAT = new JLabel("APEPAT");
+    JTextField txtAPEPAT = new JTextField();
+    
+    JLabel lblAPEMAT = new JLabel("APEMAT");
+    JTextField txtAPEMAT = new JTextField();
+    
     JLabel lblSexo = new JLabel("SEXO");
     JTextField txtSexo = new JTextField();
     
     JButton btnAgregar = new JButton("Agregar");
-    JButton btnEliminar = new JButton("ELiminar");
+    JButton btnEliminar = new JButton("Eliminar");
     JButton btnEditar = new JButton("Editar");
     JButton btnLimpiar = new JButton("Limpiar");
     JButton btnBuscar = new JButton("Buscar");
@@ -54,7 +56,7 @@ public class Panel_Usuarios extends JPanel {
     
     
     
-    public Panel_Usuarios() {
+    public PanelVentanaUsuarios() {
         this.setLayout(null);
         
         lblNombre.setBounds(20, 20, 120, 20);
@@ -67,25 +69,25 @@ public class Panel_Usuarios extends JPanel {
         txtPeso.setBounds(150, 50, 120, 20);
         this.add(txtPeso);
         
-        lblApellidoPAT.setBounds(20, 80, 120, 20);
-        this.add(lblApellidoPAT);
-        txtApellidoPAT.setBounds(150, 80, 120, 20);
-        this.add(txtApellidoPAT);
+        lblAPEPAT.setBounds(20, 80, 120, 20);
+        this.add(lblAPEPAT);
+        txtAPEPAT.setBounds(150, 80, 120, 20);
+        this.add(txtAPEPAT);
         
-        lblApellidoMAT.setBounds(20, 110, 120, 20);
-        this.add(lblApellidoMAT);
-        txtApellidoMAT.setBounds(150, 110, 120, 20);
-        this.add(txtApellidoMAT);
+        lblAPEMAT.setBounds(20, 110, 120, 20);
+        this.add(lblAPEMAT);
+        txtAPEMAT.setBounds(150, 110, 120, 20);
+        this.add(txtAPEMAT);
         
         lblSexo.setBounds(20, 140, 120, 20);
         this.add(lblSexo);
         txtSexo.setBounds(150, 140, 120, 20);
         this.add(txtSexo);
         
-       lblId_Usuarios.setBounds(280, 140, 120, 20);
-        this.add(lblId_Usuarios);
-        txtId_Usuarios.setBounds(360, 140, 120, 20);
-        this.add(txtId_Usuarios);
+       lblId_usuario.setBounds(280, 140, 120, 20);
+        this.add(lblId_usuario);
+        txtId_usuario.setBounds(360, 140, 120, 20);
+        this.add(txtId_usuario);
         
         btnAgregar.setBounds(20, 180, 120, 20);
         this.add(btnAgregar);
@@ -129,15 +131,15 @@ public class Panel_Usuarios extends JPanel {
         public void actionPerformed(ActionEvent e) {
             Usuarios usu = new Usuarios();
             String nom = txtNombre.getText();
-            int Id_Usu= Integer.parseInt(txtId_Usuarios.getText());
+            int ID= Integer.parseInt(txtId_usuario.getText());
             int peso= Integer.parseInt(txtPeso.getText());
-            String apeP = txtApellidoPAT.getText();
-            String apeM = txtApellidoMAT.getText();
+            String apeP = txtAPEPAT.getText();
+            String apeM = txtAPEMAT.getText();
             String sex = txtSexo.getText();
             
             
             usu.setNombre(nom);
-            usu.setId_usuario(Id_Usu);
+            usu.setId_usuario(ID);
             usu.setPeso(peso);
             usu.setApepat(apeP);
             usu.setApemat(apeM);
@@ -150,10 +152,10 @@ public class Panel_Usuarios extends JPanel {
     
     public void Limpiar() {
         txtNombre.setText("");
-        txtId_Usuarios.setText("");
+        txtId_usuario.setText("");
         txtPeso.setText("");
-        txtApellidoPAT.setText("");
-        txtApellidoMAT.setText("");
+        txtAPEPAT.setText("");
+        txtAPEMAT.setText("");
         txtSexo.setText("");
         
     }
@@ -161,7 +163,7 @@ public class Panel_Usuarios extends JPanel {
     class OyenteEliminar implements ActionListener{
         public void actionPerformed(ActionEvent e){
             Usuarios usu=new Usuarios();
-            int id=Integer.parseInt(txtId_Usuarios.getText());
+            int id=Integer.parseInt(txtId_usuario.getText());
             usu.setId_usuario(id);
             usu.delete();
             Limpiar();
@@ -176,15 +178,15 @@ public class Panel_Usuarios extends JPanel {
             Usuarios usu=new Usuarios();
             
             String nom=txtNombre.getText();
-            int Id_Usu= Integer.parseInt(txtId_Usuarios.getText());
+            int ID= Integer.parseInt(txtId_usuario.getText());
             int Peso= Integer.parseInt(txtPeso.getText());
-            String apeP = txtApellidoPAT.getText();
-            String apeM = txtApellidoMAT.getText();
+            String apeP = txtAPEPAT.getText();
+            String apeM = txtAPEMAT.getText();
             String Sexo = txtSexo.getText();
             
             
             
-            usu.setId_usuario(Id_Usu);
+            usu.setId_usuario(ID);
             usu.setNombre(nom);
             usu.setPeso(Peso);
             usu.setApepat(apeP);

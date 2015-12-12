@@ -9,15 +9,13 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author yerico
+ * @author Administrador
  */
-public class Ventana_Pedidos extends JFrame{
-    public Ventana_Pedidos(){
-        this.setTitle("VENTANA PeDiDoS");
-        this.setSize(700,600);
-       
-        Panel_Pedidos m2=new Panel_Pedidos();
-        this.add(m2);
-        
+public class VentanaArticulos extends JFrame{
+    public VentanaArticulos() {
+        this.setTitle("ARTICULOS");
+        this.setSize(700,700);
+        PanelVentanaArticulos p1= new PanelVentanaArticulos();
+        this.add(p1);
     }
 }

@@ -9,7 +9,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-public class Menu_prin extends JFrame {
+public class Menu extends JFrame {
     
     JMenuBar barra=new JMenuBar();
     JMenu mnuArchivo=new JMenu("Archivo");
@@ -21,14 +21,14 @@ public class Menu_prin extends JFrame {
     JMenuItem mnuArticulos=new JMenuItem("Articulos");
     
     
-    Ventana_Usuarios vU=new Ventana_Usuarios();
-    Ventana_Pedidos vPe=new Ventana_Pedidos();
-    Ventana_Articulos vAr= new Ventana_Articulos();
+    VentanaUsuarios VentanaUsuarios=new VentanaUsuarios();
+    VentanaPedidos VentanaPedidos=new VentanaPedidos();
+    VentanaArticulos VentanaArticulos= new VentanaArticulos();
     
-    public Menu_prin(){
+    public Menu(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Cuartel de Operaciones xD");
-        this.setSize(700, 700);
+        this.setSize(600, 600);
+        this.setTitle("MENU PRINCIPAL");
         this.setVisible(true);
       
         barra.add(mnuArchivo);
@@ -50,17 +50,17 @@ public class Menu_prin extends JFrame {
     }
     class OyenteModulo1 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-         vU.setVisible(true);
+         VentanaUsuarios.setVisible(true);
         }
     }
     class OyenteModulo2 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-         vPe.setVisible(true);
+         VentanaPedidos.setVisible(true);
         }
     }
     class OyenteModulo3 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-         vAr.setVisible(true);
+         VentanaArticulos.setVisible(true);
         }
     }
     

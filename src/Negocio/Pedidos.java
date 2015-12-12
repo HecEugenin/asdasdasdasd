@@ -1,6 +1,4 @@
-/*
- mascotas1
- */
+
 package Negocio;
 
 import Conexion.Conexion;
