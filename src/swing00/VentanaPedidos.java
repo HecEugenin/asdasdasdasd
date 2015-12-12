@@ -3,19 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prueba4;
+package swing00;
 
 import javax.swing.JFrame;
 
 /**
  *
- * @author Administrador
+ * @author tito
  */
-public class VentanaArticulos extends JFrame{
-    public VentanaArticulos() {
-        this.setTitle("ARTICULOS");
+public class VentanaPedidos extends JFrame{
+    public VentanaPedidos(){
+        this.setTitle("PEDIDOS");
         this.setSize(700,700);
-        PanelVentanaArticulos p1= new PanelVentanaArticulos();
-        this.add(p1);
+       
+        PanelVentanaPedidos m2=new PanelVentanaPedidos();
+        this.add(m2);
+        
     }
 }

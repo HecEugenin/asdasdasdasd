@@ -1,5 +1,5 @@
 
-package prueba4;
+package swing00;
 
 import Negocio.Pedidos;
 import java.awt.event.ActionEvent;

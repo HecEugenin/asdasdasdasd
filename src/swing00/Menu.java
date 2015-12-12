@@ -1,5 +1,5 @@
 
-package prueba4;
+package swing00;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;

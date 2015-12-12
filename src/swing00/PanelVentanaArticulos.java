@@ -1,4 +1,4 @@
-package prueba4;
+package swing00;
 
 import Negocio.Articulos;
 import java.util.List;
