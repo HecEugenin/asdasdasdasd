@@ -9,15 +9,13 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author yerico
+ * @author Administrador
  */
 public class Ventana_Articulos extends JFrame{
-    public Ventana_Articulos(){
-        this.setTitle("VENTANA ARTICULOS");
+    public Ventana_Articulos() {
+        this.setTitle("asddas");
         this.setSize(700,600);
-       
-        Panel_Articulos ar=new Panel_Articulos();
-        this.add(ar);
-        
+        Panel_Articulos p1= new Panel_Articulos();
+        this.add(p1);
     }
 }

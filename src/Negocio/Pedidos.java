@@ -62,7 +62,7 @@ public class Pedidos {
   
 
    public void save() {
-        con.setEjecutar("insert into Pedidos(fecha,codigo,id_usuario) values('" + this.fecha + "','" +this.codigo+"','"+this.id_usuario+"')");
+        con.setEjecutar("insert into Pedidos(id_pedido,fecha,codigo,id_usuario) values('" + this.id_pedido + "','" + this.fecha + "','" +this.codigo+"','"+this.id_usuario+"')");
     }
 
     public void delete() {

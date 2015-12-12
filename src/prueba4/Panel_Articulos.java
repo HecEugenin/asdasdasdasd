@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+package prueba4;
 
 import Negocio.Articulos;
 import java.util.List;
@@ -76,9 +70,9 @@ public class Panel_Articulos extends JPanel {
         this.add(btnEditar);
         btnBuscar.setBounds(540,170,120,20);
         this.add(btnBuscar);
-         Panel_Articulos.OyenteLimpiar oLimpiar = new Panel_Articulos.OyenteLimpiar();
+        OyenteLimpiar oLimpiar = new OyenteLimpiar();
         btnLimpiar.addActionListener(oLimpiar);
-        Panel_Articulos.OyenteAgregar oAgregar = new Panel_Articulos.OyenteAgregar();
+        OyenteAgregar oAgregar = new OyenteAgregar();
         btnAgregar.addActionListener(oAgregar);
         OyenteEliminar oEliminar=new OyenteEliminar();
         btnEliminar.addActionListener(oEliminar);
