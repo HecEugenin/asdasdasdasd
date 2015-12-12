@@ -11,13 +11,13 @@ import javax.swing.JFrame;
  *
  * @author yerico
  */
-public class Ventana_Raza extends JFrame{
-    public Ventana_Raza(){
-        this.setTitle("VENTANA RAZA");
+public class Ventana_Pedidos extends JFrame{
+    public Ventana_Pedidos(){
+        this.setTitle("VENTANA PeDiDoS");
         this.setSize(700,600);
        
-        Panel_Raza r2=new Panel_Raza();
-        this.add(r2);
+        Panel_Pedidos m2=new Panel_Pedidos();
+        this.add(m2);
         
     }
 }

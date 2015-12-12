@@ -14,13 +14,16 @@ public class Menu_prin extends JFrame {
     JMenuBar barra=new JMenuBar();
     JMenu mnuArchivo=new JMenu("Archivo");
     JMenu mnuModulos=new JMenu("Modulos");
+    
     JMenuItem mnuSalir=new JMenuItem("Salir");
     JMenuItem mnuUsuarios=new JMenuItem("Usuarios");
-    JMenuItem mnuMascotas=new JMenuItem("Mascotas");
-    JMenuItem mnuRazas=new JMenuItem("Razas");
+    JMenuItem mnuPedidos=new JMenuItem("Pedidos");
+    JMenuItem mnuArticulos=new JMenuItem("Articulos");
+    
+    
     Ventana_Usuarios vU=new Ventana_Usuarios();
-    Ventana_Mascota vMS=new Ventana_Mascota();
-    Ventana_Raza vRZ= new Ventana_Raza();
+    Ventana_Pedidos vPe=new Ventana_Pedidos();
+    Ventana_Articulos vAr= new Ventana_Articulos();
     
     public Menu_prin(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,16 +34,16 @@ public class Menu_prin extends JFrame {
         barra.add(mnuArchivo);
         barra.add(mnuModulos);
         mnuModulos.add(mnuUsuarios);
-        mnuModulos.add(mnuMascotas);
-        mnuModulos.add(mnuRazas);
+        mnuModulos.add(mnuPedidos);
+        mnuModulos.add(mnuArticulos);
         mnuArchivo.add(mnuSalir);
         this.add(barra,BorderLayout.NORTH);
         OyenteModulo1 o1=new OyenteModulo1();
         mnuUsuarios.addActionListener(o1);
         OyenteModulo2 o2=new OyenteModulo2();
-        mnuMascotas.addActionListener(o2);
+        mnuPedidos.addActionListener(o2);
         OyenteModulo3 o3=new OyenteModulo3();
-        mnuRazas.addActionListener(o3);
+        mnuArticulos.addActionListener(o3);
         
         OyenteCerrar oCerrar=new OyenteCerrar();
         mnuSalir.addActionListener(oCerrar);
@@ -52,12 +55,12 @@ public class Menu_prin extends JFrame {
     }
     class OyenteModulo2 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-         vMS.setVisible(true);
+         vPe.setVisible(true);
         }
     }
     class OyenteModulo3 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-         vRZ.setVisible(true);
+         vAr.setVisible(true);
         }
     }
     

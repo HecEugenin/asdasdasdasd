@@ -22,14 +22,14 @@ public class Panel_Usuarios extends JPanel {
     JTextField txtNombre = new JTextField();
     JLabel lblId_Usuarios = new JLabel("id_usuarios");
     JTextField txtId_Usuarios = new JTextField();
-    JLabel lblRut = new JLabel("RUT");
-    JTextField txtRut = new JTextField();
+    JLabel lblPeso = new JLabel("PESO");
+    JTextField txtPeso  = new JTextField();
     JLabel lblApellidoPAT = new JLabel("Apellido Paterno");
     JTextField txtApellidoPAT = new JTextField();
     JLabel lblApellidoMAT = new JLabel("Apellido Materno");
     JTextField txtApellidoMAT = new JTextField();
-    JLabel lblId_Mascota = new JLabel("id_mascota");
-    JTextField txtId_Mascota = new JTextField();
+    JLabel lblSexo = new JLabel("SEXO");
+    JTextField txtSexo = new JTextField();
     
     JButton btnAgregar = new JButton("Agregar");
     JButton btnEliminar = new JButton("ELiminar");
@@ -41,10 +41,11 @@ public class Panel_Usuarios extends JPanel {
     DefaultTableModel modelo=new DefaultTableModel();{
         modelo.addColumn("ID");
         modelo.addColumn("NOMBRE");
-        modelo.addColumn("RUT");
-        modelo.addColumn("APELLIDO PATERNO");
-        modelo.addColumn("APELLIDO MATERNO");
-        modelo.addColumn("ID_Mascota");
+        modelo.addColumn("PESO");
+         modelo.addColumn("SEXO");
+        modelo.addColumn("APEPAT");
+        modelo.addColumn("APEMAT");
+       
     }
     
     JTable tabla=new JTable(modelo);
@@ -61,10 +62,10 @@ public class Panel_Usuarios extends JPanel {
         txtNombre.setBounds(150, 20, 120, 20);
         this.add(txtNombre);
         
-        lblRut.setBounds(20, 50, 120, 20);
-        this.add(lblRut);
-        txtRut.setBounds(150, 50, 120, 20);
-        this.add(txtRut);
+        lblPeso.setBounds(20, 50, 120, 20);
+        this.add(lblPeso);
+        txtPeso.setBounds(150, 50, 120, 20);
+        this.add(txtPeso);
         
         lblApellidoPAT.setBounds(20, 80, 120, 20);
         this.add(lblApellidoPAT);
@@ -76,10 +77,10 @@ public class Panel_Usuarios extends JPanel {
         txtApellidoMAT.setBounds(150, 110, 120, 20);
         this.add(txtApellidoMAT);
         
-        lblId_Mascota.setBounds(20, 140, 120, 20);
-        this.add(lblId_Mascota);
-        txtId_Mascota.setBounds(150, 140, 120, 20);
-        this.add(txtId_Mascota);
+        lblSexo.setBounds(20, 140, 120, 20);
+        this.add(lblSexo);
+        txtSexo.setBounds(150, 140, 120, 20);
+        this.add(txtSexo);
         
        lblId_Usuarios.setBounds(280, 140, 120, 20);
         this.add(lblId_Usuarios);
@@ -129,17 +130,18 @@ public class Panel_Usuarios extends JPanel {
             Usuarios usu = new Usuarios();
             String nom = txtNombre.getText();
             int Id_Usu= Integer.parseInt(txtId_Usuarios.getText());
-            int rut= Integer.parseInt(txtRut.getText());
+            int peso= Integer.parseInt(txtPeso.getText());
             String apeP = txtApellidoPAT.getText();
             String apeM = txtApellidoMAT.getText();
-            int Mascota_id = Integer.parseInt(txtId_Mascota.getText());
+            String sex = txtSexo.getText();
+            
             
             usu.setNombre(nom);
-            usu.setId_Usuario(Id_Usu);
-            usu.setRut(rut);
+            usu.setId_usuario(Id_Usu);
+            usu.setPeso(peso);
             usu.setApepat(apeP);
             usu.setApemat(apeM);
-            usu.setId_mascota(Mascota_id);
+            usu.setSexo(sex);
             usu.save();
             Limpiar();
             llenarTabla();
@@ -149,10 +151,10 @@ public class Panel_Usuarios extends JPanel {
     public void Limpiar() {
         txtNombre.setText("");
         txtId_Usuarios.setText("");
-        txtRut.setText("");
+        txtPeso.setText("");
         txtApellidoPAT.setText("");
         txtApellidoMAT.setText("");
-        txtId_Mascota.setText("");
+        txtSexo.setText("");
         
     }
 
@@ -160,7 +162,7 @@ public class Panel_Usuarios extends JPanel {
         public void actionPerformed(ActionEvent e){
             Usuarios usu=new Usuarios();
             int id=Integer.parseInt(txtId_Usuarios.getText());
-            usu.setId_Usuario(id);
+            usu.setId_usuario(id);
             usu.delete();
             Limpiar();
             llenarTabla();
@@ -175,17 +177,19 @@ public class Panel_Usuarios extends JPanel {
             
             String nom=txtNombre.getText();
             int Id_Usu= Integer.parseInt(txtId_Usuarios.getText());
-            int rut= Integer.parseInt(txtRut.getText());
+            int Peso= Integer.parseInt(txtPeso.getText());
             String apeP = txtApellidoPAT.getText();
             String apeM = txtApellidoMAT.getText();
+            String Sexo = txtSexo.getText();
             
             
             
-            usu.setId_Usuario(Id_Usu);
+            usu.setId_usuario(Id_Usu);
             usu.setNombre(nom);
-            usu.setRut(rut);
-            usu.setApemat(apeP);
+            usu.setPeso(Peso);
             usu.setApepat(apeP);
+            usu.setApepat(apeM);
+            usu.setSexo(Sexo);
            
             usu.update();
             Limpiar();
@@ -203,12 +207,12 @@ public class Panel_Usuarios extends JPanel {
        Object[] list=new Object[6];
         for(int i=0;i<lista.size();i++){
            
-            list[0]=""+lista.get(i).getId_Usuario();
+            list[0]=""+lista.get(i).getId_usuario();
             list[1]=""+lista.get(i).getNombre();
-            list[2]=""+lista.get(i).getRut();
+            list[2]=""+lista.get(i).getPeso();
             list[3]=""+lista.get(i).getApepat();
             list[4]=""+lista.get(i).getApemat();
-            list[5]=""+lista.get(i).getId_mascota();
+            list[5]=""+lista.get(i).getSexo();
            
             modelo.addRow(list);
             

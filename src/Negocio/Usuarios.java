@@ -9,31 +9,25 @@ public class Usuarios {
 
     private int id_usuario;
     private String nombre;
-    private int rut;
+    private int peso;
+    private String sexo;
     private String apepat;
     private String apemat;
-    private int id_mascota;
     Conexion con;
 
-    public int getRut() {
-        return rut;
+    public Conexion getCon() {
+        return con;
     }
 
-    public void setRut(int rut) {
-        this.rut = rut;
+    public void setCon(Conexion con) {
+        this.con = con;
     }
 
-    public Usuarios() {
-        con = new Conexion();
-    }
-    
-    
-    public int getId_Usuario() {
+    public int getId_usuario() {
         return id_usuario;
-        
     }
 
-    public void setId_Usuario(int id_usuario) {
+    public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
     }
 
@@ -43,6 +37,22 @@ public class Usuarios {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     public String getApepat() {
@@ -60,25 +70,14 @@ public class Usuarios {
     public void setApemat(String apemat) {
         this.apemat = apemat;
     }
-
-    public int getId_mascota() {
-        return id_mascota;
+    public Usuarios() {
+        con = new Conexion();
     }
 
-    public void setId_mascota(int id_mascota) {
-        this.id_mascota = id_mascota;
-    }
-
-    public Conexion getCon() {
-        return con;
-    }
-
-    public void setCon(Conexion con) {
-        this.con = con;
-    }
+   
 
     public void save() {
-        con.setEjecutar("insert into usuarios(id_usuario,rut,nombre,apepat,apemat,id_mascota) values('" + this.id_usuario + "','" + this.rut + "','"+this.nombre+"','" + this.apepat + "','" + this.apemat + "','" + this.id_mascota + "')");
+        con.setEjecutar("insert into usuarios(id_usuario,nombre,peso,sexo,apepat,apemat) values('" + this.id_usuario + "','" + this.nombre + "','"+this.peso+"','" + this.sexo + "','" + this.apepat + "','" + this.apemat + "')");
     }
 
     public void delete() {
@@ -86,7 +85,7 @@ public class Usuarios {
     }
 
     public void update() {
-        con.setEjecutar("update usuarios set rut='" + this.rut + "', nombre='" + this.nombre + "',apepat='" + this.apepat + "',apemat='"+this.apemat+"' where  id_usuario='" + this.id_usuario + "'");
+        con.setEjecutar("update usuarios set nombre='" + this.nombre + "', peso='" + this.peso + "',sexo='" + this.sexo + "',apepat='"+this.apepat+"' apemat='" + this.apemat + "'  where  id_usuario='" + this.id_usuario + "'");
     }
 
    
@@ -95,17 +94,17 @@ public class Usuarios {
     
 public List list(){
         List<Usuarios> lista=new ArrayList<Usuarios>();
-        con.setSeleccion("select * from Usuarios");
+        con.setSeleccion("select * from usuarios");
         Usuarios user;
         try{
             while(con.getRs().next()){
                 user=new Usuarios();
-                user.setId_Usuario(con.getRs().getInt("id_usuario"));
+                user.setId_usuario(con.getRs().getInt("id_usuario"));
                 user.setNombre(con.getRs().getString("nombre"));
-                user.setApepat(con.getRs().getString("apepat"));
-                user.setApemat(con.getRs().getString("apemat"));
-                user.setRut(con.getRs().getInt("rut"));
-                user.setId_mascota(con.getRs().getInt("Id_Mascota"));
+                user.setPeso(con.getRs().getInt("peso"));
+                user.setSexo(con.getRs().getString("sexo"));
+                user.setApepat(con.getRs().getString("Apepat"));
+                user.setApemat(con.getRs().getString("Apemat"));
                 lista.add(user);
             }
         }catch(Exception ex){
@@ -116,7 +115,3 @@ public List list(){
 }
 
 
-/* public void Buscar(){
-        con.setEjecutar("select * from Usuarios where nombre like '%'" + this.nombre + "'%' ");
-    }
-*/
