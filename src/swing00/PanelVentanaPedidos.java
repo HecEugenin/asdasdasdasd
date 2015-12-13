@@ -127,8 +127,8 @@ public class PanelVentanaPedidos extends JPanel {
         class OyenteEliminar implements ActionListener{
         public void actionPerformed(ActionEvent e){
             Pedidos  ped=new Pedidos();
-            String id=txtId_pedido.getText();
-            ped.setFecha(id);
+            int id=Integer.parseInt(txtId_pedido.getText());
+            ped.setId_pedido(id);
             ped.delete();
             Limpiar();
             llenarTabla();
@@ -182,5 +182,6 @@ public void llenarTabla(){
         txtFecha.setText("");
         txtCodigo.setText("");
         txtId_usuario.setText("");
+        txtId_pedido.setText("");
     }
 }

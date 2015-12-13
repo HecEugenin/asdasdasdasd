@@ -124,10 +124,10 @@ public class PanelVentanaArticulos extends JPanel {
         public void actionPerformed(ActionEvent e){
             Articulos  art=new Articulos();
             int id=Integer.parseInt(txtId_articulo.getText());
-            art.setId_pedido(id);
+            art.setId_articulo(id);
             art.delete();
             Limpiar();
-            
+            llenarTabla();
         }
     }
     class OyenteEditar implements ActionListener{
@@ -175,7 +175,7 @@ public class PanelVentanaArticulos extends JPanel {
         txtNombre.setText("");
         txtPrecio.setText("");
         txtId_pedido.setText("");
-
+        txtId_articulo.setText("");
     }
 }
       

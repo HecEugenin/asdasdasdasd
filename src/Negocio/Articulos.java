@@ -67,7 +67,7 @@ public class Articulos {
         con.setEjecutar("delete from articulos where id_articulo='" + this.id_articulo + "'");
      }
          public void update() {
-        con.setEjecutar("update articulos set descripcion='" + this.descripcion + "',nombre='" + this.nombre + "',precio='"+this.precio+"',id_pedido='" + this.id_pedido + " where  id_usuario='" + this.id_articulo + "'");
+        con.setEjecutar("update articulos set descripcion='" + this.descripcion + "',nombre='" + this.nombre + "',precio='"+this.precio+"',id_pedido='" + this.id_pedido + " where  id_articulo='" + this.id_articulo + "'");
          }
         
 public List list(){
