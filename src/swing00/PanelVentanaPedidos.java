@@ -14,16 +14,16 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 public class PanelVentanaPedidos extends JPanel {
-    JLabel lblId_pedido = new JLabel("Id_pedido");
+    JLabel lblId_pedido = new JLabel("ID_PEDIDO");
     JTextField txtId_pedido = new JTextField();
 
-        JLabel lblFecha = new JLabel("Fecha");
+        JLabel lblFecha = new JLabel("FECHA");
     JTextField txtFecha = new JTextField();
    
-    JLabel lblCodigo = new JLabel("Codigo");
+    JLabel lblCodigo = new JLabel("CODIGO");
     JTextField txtCodigo = new JTextField();
    
-    JLabel lblId_usuario = new JLabel("Id_usuario");
+    JLabel lblId_usuario = new JLabel("ID_USUARIO");
     JTextField txtId_usuario = new JTextField();
     
     JButton btnAgregar = new JButton("Agregar");
@@ -47,9 +47,9 @@ public class PanelVentanaPedidos extends JPanel {
 
     public PanelVentanaPedidos() {
           this.setLayout(null);
-        lblId_pedido.setBounds(20, 20, 120, 20);
+      lblId_pedido.setBounds(280, 140, 120, 20);
         this.add(lblId_pedido);
-        txtId_pedido.setBounds(150, 20, 120, 20);
+        txtId_pedido.setBounds(360, 140, 120, 20);
         this.add(txtId_pedido);
         
         lblFecha .setBounds(20, 50, 120, 20);

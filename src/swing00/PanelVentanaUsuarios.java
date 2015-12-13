@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 public class PanelVentanaUsuarios extends JPanel {
- JLabel lblId_usuario = new JLabel("id_usuario");
+ JLabel lblId_usuario = new JLabel("ID_USUARIO");
     JTextField txtId_usuario = new JTextField();
     
     JLabel lblNombre = new JLabel("NOMBRE");
@@ -41,7 +41,7 @@ public class PanelVentanaUsuarios extends JPanel {
     
     
     DefaultTableModel modelo=new DefaultTableModel();{
-        modelo.addColumn("ID");
+        modelo.addColumn("ID_USUARIO");
         modelo.addColumn("NOMBRE");
         modelo.addColumn("PESO");
          modelo.addColumn("SEXO");

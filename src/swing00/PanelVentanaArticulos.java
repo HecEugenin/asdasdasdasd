@@ -27,7 +27,7 @@ public class PanelVentanaArticulos extends JPanel {
     JLabel lblPrecio = new JLabel("PRECIO");
     JTextField txtPrecio = new JTextField();
     
-    JLabel lblId_pedido = new JLabel("Id_pedido");
+    JLabel lblId_pedido = new JLabel("ID_PEDIDO");
     JTextField txtId_pedido = new JTextField();
     JButton btnAgregar = new JButton("Agregar");
     JButton btnBuscar = new JButton("Buscar");
@@ -35,7 +35,7 @@ public class PanelVentanaArticulos extends JPanel {
     JButton btnEditar = new JButton("Editar");
     JButton btnLimpiar = new JButton("Limpiar");
      JTextField txtId_articulo = new JTextField();
-    JLabel lblId_articulo = new JLabel("Id_articulo");
+    JLabel lblId_articulo = new JLabel("ID_ARTICULO");
     
     DefaultTableModel modelo=new DefaultTableModel();{
         modelo.addColumn("ID");
@@ -66,7 +66,10 @@ public class PanelVentanaArticulos extends JPanel {
         this.add(lblId_pedido);
         txtId_pedido.setBounds(150, 110, 120, 20);
         this.add(txtId_pedido);
-             
+          lblId_articulo.setBounds(280, 140, 120, 20);
+        this.add(lblId_articulo);
+        txtId_articulo.setBounds(360, 140, 120, 20);
+        this.add(txtId_articulo);   
                         
         
         btnAgregar.setBounds(20, 170, 120, 20);                
