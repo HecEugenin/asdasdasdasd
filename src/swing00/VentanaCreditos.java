@@ -6,7 +6,7 @@ public class VentanaCreditos extends JFrame{
         this.setTitle("Creditos");
         this.setSize(700,700);
        
-         PanelCreditos Pc=new PanelCreditos();
+         PanelVentanaCreditos Pc=new PanelVentanaCreditos();
         this.add(Pc);
     }
 }
