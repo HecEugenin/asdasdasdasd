@@ -14,29 +14,32 @@ public class Menu extends JFrame {
     JMenuBar barra=new JMenuBar();
     JMenu mnuArchivo=new JMenu("Archivo");
     JMenu mnuModulos=new JMenu("Modulos");
-    
+    JMenu mnuCreditos=new JMenu("Creditos"); 
     JMenuItem mnuSalir=new JMenuItem("Salir");
     JMenuItem mnuUsuarios=new JMenuItem("Usuarios");
     JMenuItem mnuPedidos=new JMenuItem("Pedidos");
     JMenuItem mnuArticulos=new JMenuItem("Articulos");
-    
+    JMenuItem mnuCreditos2=new JMenuItem("Creditos");
     
     VentanaUsuarios VentanaUsuarios=new VentanaUsuarios();
     VentanaPedidos VentanaPedidos=new VentanaPedidos();
     VentanaArticulos VentanaArticulos= new VentanaArticulos();
+    VentanaCreditos VentanaCreditos= new VentanaCreditos();
     
     public Menu(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(600, 600);
+        this.setSize(700, 700);
         this.setTitle("MENU PRINCIPAL");
         this.setVisible(true);
       
         barra.add(mnuArchivo);
         barra.add(mnuModulos);
+        barra.add(mnuCreditos);
         mnuModulos.add(mnuUsuarios);
         mnuModulos.add(mnuPedidos);
         mnuModulos.add(mnuArticulos);
         mnuArchivo.add(mnuSalir);
+        mnuCreditos.add(mnuCreditos2);
         this.add(barra,BorderLayout.NORTH);
         OyenteModulo1 o1=new OyenteModulo1();
         mnuUsuarios.addActionListener(o1);
