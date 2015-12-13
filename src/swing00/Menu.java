@@ -14,12 +14,12 @@ public class Menu extends JFrame {
     JMenuBar barra=new JMenuBar();
     JMenu mnuArchivo=new JMenu("Archivo");
     JMenu mnuModulos=new JMenu("Modulos");
-    JMenu mnuCreditos=new JMenu("Creditos"); 
+    JMenu mnuAcercaDe=new JMenu("Acerca De"); 
     JMenuItem mnuSalir=new JMenuItem("Salir");
     JMenuItem mnuUsuarios=new JMenuItem("Usuarios");
     JMenuItem mnuPedidos=new JMenuItem("Pedidos");
     JMenuItem mnuArticulos=new JMenuItem("Articulos");
-    JMenuItem mnuCreditos2=new JMenuItem("Creditos");
+    JMenuItem mnuCreditos=new JMenuItem("Creditos");
     
     VentanaUsuarios VentanaUsuarios=new VentanaUsuarios();
     VentanaPedidos VentanaPedidos=new VentanaPedidos();
@@ -34,12 +34,12 @@ public class Menu extends JFrame {
       
         barra.add(mnuArchivo);
         barra.add(mnuModulos);
-        barra.add(mnuCreditos);
+        barra.add(mnuAcercaDe);
         mnuModulos.add(mnuUsuarios);
         mnuModulos.add(mnuPedidos);
         mnuModulos.add(mnuArticulos);
         mnuArchivo.add(mnuSalir);
-        mnuCreditos.add(mnuCreditos2);
+        mnuAcercaDe.add(mnuCreditos);
         this.add(barra,BorderLayout.NORTH);
         OyenteModulo1 o1=new OyenteModulo1();
         mnuUsuarios.addActionListener(o1);
@@ -47,7 +47,8 @@ public class Menu extends JFrame {
         mnuPedidos.addActionListener(o2);
         OyenteModulo3 o3=new OyenteModulo3();
         mnuArticulos.addActionListener(o3);
-        
+         OyenteModulo4 o4=new OyenteModulo4();
+        mnuCreditos.addActionListener(o4);
         OyenteCerrar oCerrar=new OyenteCerrar();
         mnuSalir.addActionListener(oCerrar);
     }
@@ -64,6 +65,11 @@ public class Menu extends JFrame {
     class OyenteModulo3 implements ActionListener{
         public void actionPerformed(ActionEvent e){
          VentanaArticulos.setVisible(true);
+        }
+    }
+     class OyenteModulo4 implements ActionListener{
+        public void actionPerformed(ActionEvent e){
+         VentanaCreditos.setVisible(true);
         }
     }
     

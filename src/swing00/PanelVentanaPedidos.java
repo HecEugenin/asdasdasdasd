@@ -64,7 +64,7 @@ public class PanelVentanaPedidos extends JPanel {
         txtCodigo.setBounds(150, 80, 120, 20);
         this.add(txtCodigo);
         
-        txtId_usuario.setBounds(360, 110, 120, 20);
+        lblId_usuario.setBounds(20, 110, 120, 20);
         this.add(lblId_usuario);
         
         txtId_usuario.setBounds(150, 110, 120, 20);
